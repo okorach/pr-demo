@@ -1,0 +1,6 @@
+{
+    "sonarlint.connectedMode.project": {
+        "serverId": "SQ LATEST",
+        "projectKey": "demo:pull-request-gh"
+      },
+}
