@@ -2,7 +2,7 @@ function Person(first, last) {
     this.firstName = first;
     this.lastName = last;
     this.age = null;
-    this.eyeColor = null;
+    this.eyeColor = undefined;
     this.nationality = null;
 }
 
@@ -11,5 +11,9 @@ Person.prototype.fullname = function() {
 }
 
 Person.prototype.wishHappyBirthday = function() {
-    return "Happy birthday " + this.firstName;
+    if (this.age >= 18) {
+        return "Happy birthday " + this.firstName;
+    } else {
+        return "Happy birthday " + this.firstName;
+    }
 }
