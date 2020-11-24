@@ -1,7 +1,7 @@
 function Person(first, last) {
     this.firstName = first;
     this.lastName = last;
-    this.age = null; // FIXME
+    this.age = null;
     this.eyeColor = null;
     this.nationality = null;
 }
