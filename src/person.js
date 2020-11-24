@@ -3,7 +3,7 @@ function Person(first, last) {
     this.lastName = last;
     this.age = null;
     this.eyeColor = null;
-    this.nationality = undefined;
+    this.nationality = null;
 }
 
 Person.prototype.fullname = function() {
