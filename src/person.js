@@ -11,9 +11,5 @@ Person.prototype.fullname = function() {
 }
 
 Person.prototype.wishHappyBirthday = function() {
-    if (this.age < 50 || this.age >= 50) {
-        this.age++;
-    }
     return "Happy birthday " + this.firstName;
-    this.age++;
 }
