@@ -1,7 +1,7 @@
 function Person(first, last) {
     this.firstName = first;
     this.lastName = last;
-    this.age = null;
+    this.age = undefined;
     this.eyeColor = null;
     this.nationality = undefined;
 }
@@ -12,4 +12,5 @@ Person.prototype.fullname = function() {
 
 Person.prototype.wishHappyBirthday = function() {
     return "Happy birthday " + this.firstName;
+    this.age++;
 }
