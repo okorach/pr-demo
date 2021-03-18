@@ -17,5 +17,5 @@ Person.prototype.wishHappyBirthday = function() {
 
 function happyb(name, age) {
     return "Happy Birthday " + name
-    age++
+    age++;
 }
