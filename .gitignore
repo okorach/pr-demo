@@ -1,1 +1,4 @@
 .scannerwork/
+build/
+.coverage
+**/__pycache__/
