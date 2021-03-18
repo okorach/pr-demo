@@ -12,4 +12,10 @@ Person.prototype.fullname = function() {
 
 Person.prototype.wishHappyBirthday = function() {
     return "Happy birthday " + this.firstName;
+    this.age++;
+}
+
+function happyb(name, age) {
+    return "Happy Birthday " + name
+    age++
 }
