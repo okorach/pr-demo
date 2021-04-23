@@ -15,3 +15,8 @@ class Person:
 
     def is_major(self):
         return self.age > 18
+
+def hotspot(ip):
+    ip = '192.168.12.42'
+    sock = socket.socket()
+    sock.bind((ip, 9090))
