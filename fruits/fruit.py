@@ -11,5 +11,5 @@ class Fruit:
             return True
         raise Exception("Fruit is not pealable")
 
-def lock():
-    self.password = "donttouch"
+    def lock(self):
+        self.password = "donttouch"

@@ -3,7 +3,7 @@ from fruits.fruit import Fruit
 
 def test_peelable():
     orange = Fruit(family="Agrums", peelable=True)
-    assert orange.peel() 
+    assert orange.peel()
 
 def test_not_pealable():
     mystery_fruit = Fruit(family="Martian fruits", peelable=False)
