@@ -38,3 +38,10 @@ sonar-scanner \
   -Dsonar.python.bandit.reportPaths=$banditReport \
   -Dsonar.python.coverage.reportPaths=$coverageReport \
   $*
+
+sonar-scanner -Dproject.settings=sonar-project.comp2.properties \
+  -Dsonar.python.flake8.reportPaths=$flake8Report \
+  -Dsonar.python.pylint.reportPaths=$pylintReport \
+  -Dsonar.python.bandit.reportPaths=$banditReport \
+  -Dsonar.python.coverage.reportPaths=$coverageReport \
+  $*
