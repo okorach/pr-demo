@@ -9,7 +9,7 @@ def test_not_pealable():
     mystery_fruit = Fruit(family="Martian fruits", peelable=False)
     try:
         mystery_fruit.peel()
-    except Exception as e:
+    except Exception:
         assert True
     else:
         assert False
