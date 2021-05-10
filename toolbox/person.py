@@ -13,8 +13,9 @@ class Person:
         return "%s %s" % (self.firstname, self.lastname)
 
     def happy_birthday(self):
-        return "Happy birthday " + self.firstname
         self.age += 1
+        return "Happy birthday " + self.firstname
+
 
     def has_reached_majority(self):
         return self.age > 18
