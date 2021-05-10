@@ -16,7 +16,6 @@ class Person:
         self.age += 1
         return "Happy birthday " + self.firstname
 
-
     def has_reached_majority(self):
         return self.age > 18
 
