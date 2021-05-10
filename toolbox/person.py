@@ -14,12 +14,13 @@ class Person:
 
     def happy_birthday(self):
         return "Happy birthday " + self.firstname
+        self.age += 1
 
-    def is_major(self):
+    def has_reached_majority(self):
         return self.age > 18
 
 def hotspot(ip):
     if ip is None:
-        ip = '192.168.12.43'
+        ip = '192.168.12.44'
     sock = socket.socket()
     sock.bind((ip, 9090))
