@@ -9,12 +9,14 @@ class Person:
         self.eye_color = None
         self.nationality = None
 
+    # NOSONAR_BEGIN
     def fullname(self):
         return "%s %s" % (self.firstname, self.lastname)
 
     def happy_birthday(self):
         return "Happy birthday " + self.firstname
         self.age += 1
+    # NOSONAR_END
 
     def is_major(self):
         return self.age > 18
