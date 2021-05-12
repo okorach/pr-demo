@@ -32,4 +32,9 @@ jobs:
           PROJECT_SETTINGS: sonar-project.comp2.properties
         with:
           sonar.qualitygate.wait: false
-          project.settings: sonar-project.comp2.properties
+          sonar.projectKey: demo:github-project-comp-2
+          sonar.projectName: Demo: Github project / Component 2
+          sonar.sources: fruits
+          sonar.exclusions: **/*person*
+          sonar.test.exclusions: **/*person*
+
