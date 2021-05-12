@@ -10,13 +10,25 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: docker://sonarsource/sonar-scanner-cli:latest
+      - name: Analyze monorepo component 1
+        uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
-          sonar.qualitygate.wait: true
+          sonar.qualitygate.wait: false
+          project.settings: sonar-project.properties
+      - name: Analyze monorepo component 2
+        uses: docker://sonarsource/sonar-scanner-cli:latest
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+        with:
+          sonar.qualitygate.wait: false
+          project.settings: sonar-project.comp2.properties
