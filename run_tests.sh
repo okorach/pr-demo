@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This script runs pytest to generate coverage
+
 buildDir="build"
 coverageReport="$buildDir/coverage.xml"
 

@@ -1,4 +1,7 @@
 #!/bin/bash
+
+# This script runs pylint, bandit and flake8 to generate 3rd party linters issues
+
 buildDir="build"
 
 pylintReport="$buildDir/pylint-report.out"
@@ -6,10 +9,6 @@ banditReport="$buildDir/bandit-report.json"
 flake8Report="$buildDir/flake8-report.out"
 
 [ ! -d $buildDir ] && mkdir $buildDir
-
-echo "Running tests"
-coverage run -m pytest
-coverage xml -o $coverageReport
 
 echo "Running pylint"
 rm -f $pylintReport
