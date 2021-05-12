@@ -29,7 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          RPOJECT_SETTINGS: sonar-project.comp2.properties
+          PROJECT_SETTINGS: sonar-project.comp2.properties
         with:
           sonar.qualitygate.wait: false
           project.settings: sonar-project.comp2.properties
