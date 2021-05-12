@@ -15,9 +15,9 @@ jobs:
         with:
           fetch-depth: 0
       - name: Run tests
-        run: run_tests.sh
+        run: sh ./run_tests.sh
       - name: Run linters
-        run: run_linters.sh
+        run: sh ./run_linters.sh
       - name: Select monorepo component 1
         run: mv sonar-project.person.properties sonar-project.properties
       - name: Analyze monorepo component 1
