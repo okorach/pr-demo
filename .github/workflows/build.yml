@@ -31,6 +31,7 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
           PROJECT_SETTINGS: sonar-project.comp2.properties
         with:
+          project.settings: sonar-project.comp2.properties
           sonar.qualitygate.wait: false
           sonar.projectKey: demo:github-project-comp-2
           sonar.projectName: Demo - Github project / Component 2
