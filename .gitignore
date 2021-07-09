@@ -5,3 +5,6 @@ build/
 .sonarqube/
 comp-dotnet/project/obj/
 comp-dotnet/project/bin/
+comp-maven/.settings/
+comp-maven/.classpath
+comp-maven/.project
