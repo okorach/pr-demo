@@ -12,7 +12,7 @@ flake8Report="$buildDir/flake8-report.out"
 
 echo "Running pylint"
 rm -f $pylintReport
-pylint *.py */*.py -r n --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > $pylintReport
+pylint toolbox fruits --disable=C0114,C0116 -r n --msg-template="{path}:{line}: [{msg_id}({symbol}), {obj}] {msg}" > $pylintReport
 
 echo "Running flake8"
 rm -f $flake8Report
