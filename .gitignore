@@ -8,3 +8,7 @@ comp-dotnet/project/bin/
 comp-maven/.settings/
 comp-maven/.classpath
 comp-maven/.project
+comp-gradle/.gradle/
+comp-gradle/gradle/
+comp-gradle/gradlew*
+comp-gradle/settings.gradle

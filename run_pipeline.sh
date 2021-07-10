@@ -16,3 +16,5 @@ sonar-scanner -Dproject.settings=sonar-project.fruits.properties $*
 cd comp-maven; ./build.sh $*; cd -
 
 cd comp-dotnet; ./build.sh $*; cd -
+
+cd comp-gradle; ./build.sh $*; cd -
