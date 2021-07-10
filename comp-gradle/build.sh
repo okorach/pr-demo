@@ -1,5 +1,5 @@
 #!/bin/bash
 
-gradlew sonarqube $*
+gradlew jacocoTestReport sonarqube $*
 
 exit $?
