@@ -1,0 +1,37 @@
+{ "issues": [
+    {
+      "engineId": "gdpr-check",
+      "ruleId": "gender-forbidden",
+      "severity":"MAJOR",
+      "type":"CODE_SMELL",
+      "primaryLocation": {
+        "message": "Compensation calculation based on employee gender is forbidden",
+        "filePath": "toolbox/person.py",
+        "textRange": {
+          "startLine": 31,
+          "endLine": 34,
+          "startColumn": 12,
+          "endColumn": 46
+        }
+      },
+      "effortMinutes": 20
+    },
+    {
+      "engineId": "gdpr-check",
+      "ruleId": "religion-forbidden",
+      "severity": "CRITICAL",
+      "type": "CODE_SMELL",
+      "primaryLocation": {
+        "message": "Storing employee religion is forbidden",
+        "filePath": "toolbox/person.py",
+        "textRange": {
+            "startLine": 28,
+            "endLine": 28,
+            "startColumn": 9,
+            "endColumn": 33
+        },
+        "effortMinutes": 5
+      }
+    }
+  ]
+}
