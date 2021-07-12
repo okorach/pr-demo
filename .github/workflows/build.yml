@@ -75,7 +75,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B clean verify sonar:sonar
+        run: mvn -B clean verify sonar:sonar -Dsonar.projectKey="demo:github-comp-maven" -Dsonar.projectName="GitHub project - Maven"x@x@
       #----------------- Gradle scan --------------------
       - name: Cache Gradle packages
         uses: actions/cache@v1
@@ -91,25 +91,25 @@ jobs:
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         run: ./gradlew build sonarqube --info
       #----------------- .Net scan --------------------
-      - name: Cache SonarQube scanner
+      - name: Cache Scanner for .Net
         id: cache-sonar-scanner
         uses: actions/cache@v1
         with:
-          path: .\.sonar\scanner
+          path: ~/.sonar/scanner
           key: ${{ runner.os }}-sonar-scanner
           restore-keys: ${{ runner.os }}-sonar-scanner
       - name: Install Scanner for .Net
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: pwsh
         run: |
-          New-Item -Path .\.sonar\scanner -ItemType Directory
-          dotnet tool update dotnet-sonarscanner --global
+          New-Item -Path ../.sonar/scanner -ItemType Directory
+          dotnet tool update dotnet-sonarscanner --tool-path ../.sonar/scanner
       - name: Build and analyze .Net component
         working-directory: ./comp-dotnet
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
         shell: pwsh
         run: |
-          dotnet-sonarscanner begin /k:"example" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
+          dotnet-sonarscanner begin /k:"demo:github-comp-dotnet" /n:"GitHub project - .Net Core" /d:sonar.login="${{ secrets.SONAR_TOKEN }}" /d:sonar.host.url="${{ secrets.SONAR_HOST_URL }}"
           dotnet build
           dotnet-sonarscanner end /d:sonar.login="${{ secrets.SONAR_TOKEN }}"
