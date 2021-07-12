@@ -2,7 +2,7 @@
 
 # This script runs pylint, bandit and flake8 to generate 3rd party linters issues
 
-buildDir="build"
+buildDir="../build"
 
 pylintReport="$buildDir/pylint-report.out"
 banditReport="$buildDir/bandit-report.json"

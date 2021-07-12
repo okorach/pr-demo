@@ -12,7 +12,7 @@ class Person:
         self.firstname = first
         self.lastname = last
         self.age = 0
-        self.eye_color = None
+        self.eye_color = "Blue"
         self.gender = None
         self.religion = None
         self.compensation = 0
@@ -35,6 +35,8 @@ class Person:
     def is_major(self):
         return self.age > 18
 
+    def lock(self):
+        self.password = "donttouch"
 
 
 def hotspot(ip):

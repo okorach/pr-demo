@@ -2,7 +2,7 @@
 
 # This script runs pytest to generate coverage
 
-buildDir="build"
+buildDir="../build"
 coverageReport="$buildDir/coverage.xml"
 
 [ ! -d $buildDir ] && mkdir $buildDir
