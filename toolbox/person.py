@@ -15,6 +15,7 @@ class Person:
         self.eye_color = None
         self.gender = None
         self.religion = None
+        self.compensation = 0
 
     def fullname(self):
         return "%s %s" % (self.firstname, self.lastname)
