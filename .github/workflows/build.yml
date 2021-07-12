@@ -35,6 +35,7 @@ jobs:
       # - name: Test with pytest
       #     run: |
       #       pytest
+      #----------------- CLI scan ---------------------
       - name: Run tests
         working-directory: ./comp-cli
         run: ./run_tests.sh
@@ -55,6 +56,7 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: 11
+      #----------------- Maven scan --------------------
       - name: Cache SonarQube packages
         uses: actions/cache@v1
         with:
@@ -73,7 +75,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: mvn -B clean verify sonar:sonar    # org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        run: mvn -B clean verify sonar:sonar
+      #----------------- Gradle scan --------------------
       - name: Cache Gradle packages
         uses: actions/cache@v1
         with:
@@ -86,7 +89,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-        run: ./gradlew build sonarqube --info 
+        run: ./gradlew build sonarqube --info
+      #----------------- .Net scan --------------------
       - name: Cache SonarQube scanner
         id: cache-sonar-scanner
         uses: actions/cache@v1
