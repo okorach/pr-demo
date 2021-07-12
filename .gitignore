@@ -12,3 +12,4 @@ comp-gradle/.gradle/
 comp-gradle/gradle/
 comp-gradle/gradlew*
 comp-gradle/settings.gradle
+**/*.log
