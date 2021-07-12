@@ -17,6 +17,15 @@ class Person:
         self.religion = None
         self.compensation = 0
 
+    def store_religion(self, religion):
+        self.religion = religion
+
+    def compute_pay(self):
+        if self.gender == Person.MALE:
+            self.compensation = SOME_VALUE
+        elif self.gender == Person.FEMALE:
+            self.compensation = ANOTHER_VALUE
+
     def fullname(self):
         return "%s %s" % (self.firstname, self.lastname)
 
@@ -26,14 +35,7 @@ class Person:
     def is_major(self):
         return self.age > 18
 
-    def store_religion(self, religion):
-        self.religion = religion
 
-    def compute_pay(self):
-        if self.gender == Person.MALE:
-            self.compensation = SOME_VALUE
-        elif self.gender == Person.FEMALE:
-            self.compensation = ANOTHER_VALUE
 
 def hotspot(ip):
     if ip is None:

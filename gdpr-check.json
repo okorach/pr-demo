@@ -8,8 +8,8 @@
         "message": "Compensation calculation based on gender is forbidden",
         "filePath": "toolbox/person.py",
         "textRange": {
-          "startLine": 32,
-          "endLine": 35,
+          "startLine": 24,
+          "endLine": 27,
           "startColumn": 12,
           "endColumn": 45
         }
@@ -25,8 +25,8 @@
         "message": "Storing religion is forbidden",
         "filePath": "toolbox/person.py",
         "textRange": {
-            "startLine": 28,
-            "endLine": 28,
+            "startLine": 21,
+            "endLine": 21,
             "startColumn": 9,
             "endColumn": 32
         },
