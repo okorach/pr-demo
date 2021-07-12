@@ -1,11 +1,12 @@
 import socket
 
+SOME_VALUE = 56000
+ANOTHER_VALUE = 61000
+
 class Person:
 
     MALE = 1
     FEMALE = 2
-    SOME_VALUE = 56000
-    ANOTHER_VALUE = 61000
 
     def __init__(self, first=None, last=None):
         self.firstname = first
@@ -28,9 +29,9 @@ class Person:
         self.religion = religion
 
     def compute_pay(self):
-        if self.gender == MALE:
+        if self.gender == Person.MALE:
             self.compensation = SOME_VALUE
-        elif self.gender == FEMALE:
+        elif self.gender == Person.FEMALE:
             self.compensation = ANOTHER_VALUE
 
 def hotspot(ip):
