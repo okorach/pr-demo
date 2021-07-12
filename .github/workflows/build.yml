@@ -36,35 +36,17 @@ jobs:
       #     run: |
       #       pytest
       - name: Run tests
-        run: sh ./run_tests.sh
+        run: sh cd comp-cli; ./run_tests.sh; cd -
       - name: Run linters
-        run: sh ./run_linters.sh
-      - name: Select monorepo component 1
-        run: mv sonar-project.person.properties sonar-project.properties
-      - name: Analyze monorepo component 1
+        run: sh cd comp-cli; ./run_linters.sh; cd -
+      - name: Analyze CLI comp
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
         with:
+          sonar.projectBaseDir: comp-cli
           sonar.qualitygate.wait: false
-          project.settings: sonar-project.properties
-      - name: Select monorepo component 1
-        run: mv sonar-project.fruits.properties sonar-project.properties
-      - name: Analyze monorepo component 1
-        uses: docker://sonarsource/sonar-scanner-cli:latest
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
-          PROJECT_SETTINGS: sonar-project.comp2.properties
-        with:
-          project.settings: sonar-project.comp2.properties
-          sonar.qualitygate.wait: false
-          sonar.projectKey: demo:github-project-comp-2
-          sonar.projectName: Demo - Github project / Component 2
-          sonar.sources: fruits
-          sonar.exclusions: \**/*person*
-          sonar.test.exclusions: \**/*person*
+
 

@@ -9,4 +9,4 @@ def test_birthday():
     me = Person("Olivier", "Korach")
     me.age = 50
     me.happy_birthday()
-    assert me.age == 51
+    assert me.age == 50
