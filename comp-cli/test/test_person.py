@@ -1,5 +1,5 @@
 
-from toolbox.person import Person
+from src.person import Person
 
 def test_fullname():
     me = Person("Olivier", "Korach")
