@@ -4,6 +4,7 @@
       "ruleId": "gender-forbidden",
       "severity":"MAJOR",
       "type":"CODE_SMELL",
+      "effortMinutes": 5,
       "primaryLocation": {
         "message": "Compensation calculation based on gender is forbidden",
         "filePath": "toolbox/person.py",
@@ -13,14 +14,14 @@
           "startColumn": 12,
           "endColumn": 45
         }
-      },
-      "effortMinutes": 20
+      }
     },
     {
       "engineId": "gdpr-check",
       "ruleId": "religion-forbidden",
       "severity": "CRITICAL",
       "type": "CODE_SMELL",
+      "effortMinutes": 5,
       "primaryLocation": {
         "message": "Storing religion is forbidden",
         "filePath": "toolbox/person.py",
@@ -29,8 +30,17 @@
             "endLine": 21,
             "startColumn": 9,
             "endColumn": 32
-        },
-        "effortMinutes": 5
+        }
+      },
+      "secondaryLocations": {
+        "message": "religion field defined in object",
+        "filePath": "toolbox/person.py",
+        "textRange": {
+            "startLine": 17,
+            "endLine": 17,
+            "startColumn": 9,
+            "endColumn": 21
+        }
       }
     }
   ]
