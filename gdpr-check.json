@@ -5,7 +5,7 @@
       "severity":"MAJOR",
       "type":"CODE_SMELL",
       "primaryLocation": {
-        "message": "Compensation calculation based on employee gender is forbidden",
+        "message": "Compensation calculation based on gender is forbidden",
         "filePath": "toolbox/person.py",
         "textRange": {
           "startLine": 31,
@@ -22,7 +22,7 @@
       "severity": "CRITICAL",
       "type": "CODE_SMELL",
       "primaryLocation": {
-        "message": "Storing employee religion is forbidden",
+        "message": "Storing religion is forbidden",
         "filePath": "toolbox/person.py",
         "textRange": {
             "startLine": 28,
