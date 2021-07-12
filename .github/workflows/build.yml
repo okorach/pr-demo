@@ -36,9 +36,11 @@ jobs:
       #     run: |
       #       pytest
       - name: Run tests
-        run: sh cd comp-cli; ./run_tests.sh; cd -
+        working-directory: ./comp-cli
+        run: ./run_tests.sh
       - name: Run linters
-        run: sh cd comp-cli; ./run_linters.sh; cd -
+        working-directory: ./comp-cli
+        run: ./run_linters.sh
       - name: Analyze CLI comp
         uses: docker://sonarsource/sonar-scanner-cli:latest
         env:
