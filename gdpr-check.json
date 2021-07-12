@@ -1,9 +1,10 @@
-{ "issues": [
+{
+  "issues": [
     {
       "engineId": "gdpr-check",
       "ruleId": "gender-forbidden",
-      "severity":"MAJOR",
-      "type":"CODE_SMELL",
+      "severity": "MAJOR",
+      "type": "CODE_SMELL",
       "effortMinutes": 5,
       "primaryLocation": {
         "message": "Compensation calculation based on gender is forbidden",
@@ -26,22 +27,24 @@
         "message": "Storing religion is forbidden",
         "filePath": "toolbox/person.py",
         "textRange": {
-            "startLine": 21,
-            "endLine": 21,
-            "startColumn": 9,
-            "endColumn": 32
+          "startLine": 21,
+          "endLine": 21,
+          "startColumn": 9,
+          "endColumn": 32
         }
       },
-      "secondaryLocations": {
-        "message": "religion field defined in object",
-        "filePath": "toolbox/person.py",
-        "textRange": {
+      "secondaryLocations": [
+        {
+          "message": "religion field defined in object",
+          "filePath": "toolbox/person.py",
+          "textRange": {
             "startLine": 17,
             "endLine": 17,
             "startColumn": 9,
             "endColumn": 21
+          }
         }
-      }
+      ]
     }
   ]
 }
